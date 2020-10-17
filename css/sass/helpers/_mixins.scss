@@ -1,0 +1,58 @@
+// media quety mixin for help only
+@mixin minMedium {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// overlay mixin
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+// prefixes mixin
+@mixin prefixer($property, $value, $prefixes:()) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix +"-" + $property}: $value;
+    }
+    #{$property}:$value;
+}
+
+// animation mixin
+@mixin keyFrame($animatinName) {
+    @-webkit-keyframes #{$animatinName} {
+        @content;
+    }
+    @-moz-keyframes #{$animatinName} {
+        @content;
+    }
+    @-ms-keyframes #{$animatinName} {
+        @content;
+    }
+    @-o-keyframes #{$animatinName} {
+        @content;
+    }
+    @keyframes #{$animatinName} {
+        @content;
+    }
+}
+
+// mixin images
+@mixin images {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+// mixin opacity
+@mixin opacity($value) {
+    zoom: 1;
+    $opacity-ie: $value * 100;
+    filter: alfa(opacity=$opacity-ie);
+    opacity: $value;
+}

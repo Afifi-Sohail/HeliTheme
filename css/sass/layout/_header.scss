@@ -1,0 +1,70 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(28, 28, 28, .8);
+    .logo {
+        background-color: $bgColor;
+        color: $font2Color;
+        width: 56px;
+        height: 61px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1.4;
+        @media #{$maxMopile} {
+            margin-left: 40px;
+        }
+    }
+    i {
+        font-size: 40px;
+        color: $font2Color;
+        margin-left: auto;
+        margin-top: 10px;
+        cursor: pointer;
+        display: none !important;
+        @media #{$maxSmall} {
+            display: block !important
+        }
+        @media #{$maxMopile} {
+            margin-right: 40px;
+        }
+    }
+    ul {
+        @media #{$maxSmall} {
+            padding-top: 15px;
+            display: none
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 25px;
+            text-transform: uppercase;
+            margin-top: 14px;
+            font-weight: bold;
+            font-size: 21px;
+            @media #{$maxSmall} {
+                display: block
+            }
+            @media #{$maxMopile} {
+                font-size: 18px;
+                margin-left: 35px;
+            }
+            a {
+                text-decoration: none;
+                color: $font2Color;
+                @include prefixer(transition, .3s ease-in-out, webkit moz ms o);
+                &:hover {
+                    text-decoration: none;
+                    color: $colorHover;
+                }
+            }
+            .active {
+                color: $colorHover;
+            }
+        }
+    }
+}

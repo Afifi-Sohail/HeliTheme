@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    @include prefixer(box-sizing, border-box, webkit moz ms o);
+}
+
+body {
+    overflow-x: hidden;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.banner {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    div {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        @include prefixer(transform,
+        translate(0, -50%),
+        webkit moz ms o);
+        @media #{$maxMopile} {
+            left: 50%;
+            @include prefixer(transform,
+            translate(-50%, -50%),
+            webkit moz ms o);
+        }
+        span.banner-span {
+            font-size: 15px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: $font3Color;
+        }
+        h2 {
+            font-size: $fontSizeh2;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 5px 0;
+            letter-spacing: 10px;
+            @media #{$maxMopile} {
+                font-size: 35px;
+            }
+            span {
+                font-weight: 100;
+            }
+        }
+        ul {
+            li {
+                margin: 5px 25px;
+                font-size: $fontSizep;
+                font-weight: bold;
+                color: $font3Color;
+            }
+        }
+    }
+}
+
+.section1 {
+    background-color: $bgColor;
+    h3 {
+        color: $font2Color;
+        font-size: $fontSizeh3;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        margin: 100px 0 0;
+        @media #{$maxSmall} {
+            text-align: center;
+        }
+        @media #{$maxMopile} {
+            font-size: 24px;
+        }
+        span {
+            font-weight: 100;
+            color: $font3Color
+        }
+    }
+    .div-1 {
+        margin: 30px 0;
+        p {
+            color: $font3Color;
+            font-size: $fontSizep;
+            @media #{$maxMopile} {
+                font-size: 16px;
+            }
+        }
+    }
+    .div-2 {
+        padding: 10px;
+        margin: 30px 0;
+        color: $font2Color;
+        i {
+            font-size: $fontSizei;
+        }
+        p {
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.section2 {
+    .svg {
+        margin: 100px 0;
+        @media #{$maxSmall} {
+            margin: 100px auto 20px
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .creative {
+        margin: 100px 00;
+        h3 {
+            font-size: $fontSizeh3;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+            @media #{$maxMopile} {
+                font-size: 22px;
+                letter-spacing: 7px;
+            }
+            span {
+                font-weight: 100;
+                color: $font3Color;
+            }
+        }
+        div {
+            margin: 0 0 30px;
+            @media#{$maxSmall} {
+                margin-bottom: 50px;
+            }
+            i {
+                margin-left: 30px;
+                font-size: 20px;
+            }
+            span {
+                text-transform: uppercase;
+                margin-left: 5px;
+            }
+            p {
+                margin-left: 30px;
+                font-size: $fontSizep;
+                color: $font3Color;
+                @media #{$maxMopile} {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.section3 {
+    background-image: url("../images/Black And White Photo Of Laptop.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    position: relative;
+    @media #{$maxSmall} {
+        padding-bottom: 20px;
+    }
+    .overlay {
+        @include overlay;
+        background-color: rgba(#000, .6)
+    }
+    div {
+        color: $font2Color;
+        @media #{$maxSmall} {
+            margin-bottom: 50px;
+        }
+        i {
+            font-size: $fontSizei;
+        }
+        p {
+            text-transform: uppercase;
+            margin-top: 25px;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        span {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+}
+
+.section4 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #e4e3e3;
+    div {
+        h3 {
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+            margin-top: 60px;
+            span {
+                font-weight: 100;
+                color: $font3Color
+            }
+        }
+        p {
+            margin: 15px 20px;
+            font-size: $fontSizep;
+            color: $font3Color;
+            @media #{$maxMopile} {
+                font-size: 16px;
+            }
+        }
+        button {
+            margin: 0 20px
+        }
+    }
+    .box {
+        height: 300px;
+        padding: 0;
+        @media#{$maxSmall} {
+            margin-top: 70px
+        }
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #222;
+            color: $font2Color;
+            text-transform: uppercase;
+            width: 100%;
+            height: 15%;
+            text-align: center;
+            span {
+                font-size: 11px;
+                line-height: 4;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.section5 {
+    background-color: $bgColor;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .content-1 {
+        h3 {
+            width: 40px;
+            text-align: center;
+            display: block;
+            font-size: 30px;
+            line-height: 1.3;
+            font-weight: bold;
+            height: 40px;
+            background-color: $font2Color;
+            color: $font1Color;
+            @media #{$maxMopile} {
+                margin-left: 20px;
+            }
+        }
+        p {
+            color: #ccc;
+            margin: 20px 0;
+            @media #{$maxSmall} {
+                margin: 25px;
+                display: inline-block;
+            }
+            @media #{$maxMopile} {
+                display: block
+            }
+            i {
+                font-size: 16px;
+                color: #ccc;
+            }
+        }
+        .i-1 {
+            color: $font2Color;
+            margin: 0 5px;
+            font-size: 25px;
+            @include prefixer(transition,
+            box-shadow .3s ease-in-out);
+            @media #{$maxSmall} {
+                margin: 0px 0px 30px 25px;
+            }
+            &:hover {
+                @include prefixer(box-shadow,
+                (1px 1px 3px 3px #ccc,
+                -1px -1px 3px 3px #ccc),
+                webkit moz ms o);
+                cursor: pointer;
+            }
+        }
+    }
+    .content-2 {
+        @media #{$maxMopile} {
+            margin-top: 50px;
+        }
+        h3 {
+            color: $font2Color;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        span {
+            color: #ccc;
+            display: block;
+        }
+        ul {
+            li {
+                list-style: none;
+                color: #ccc;
+                padding: 5px;
+                border-top: 1px solid #ccc;
+                @media #{$maxMopile} {
+                    border: none
+                }
+                &:last-child {
+                    border-bottom: 1px solid #ccc;
+                    @media #{$maxMopile} {
+                        border: none
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #ccc;
+    text-align: center;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: uppercase;
+    @media #{$maxSmall} {
+        font-size: 19px;
+    }
+    @media #{$maxMopile} {
+        font-size: 16px;
+    }
+}

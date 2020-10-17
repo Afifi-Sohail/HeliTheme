@@ -1,0 +1,36 @@
+button {
+    width: 200px;
+    font-size: 18px;
+    margin: 5px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: inherit;
+    outline: none;
+    border: 1px solid #908282;
+    border-radius: 25px;
+    @include prefixer(transition, all .5s ease-in-out, webkit moz ms o);
+    &:hover {
+        @include prefixer(box-shadow, (2px 2px 3px #000, -2px -2px 3px #000, 2px -2px 3px #000, -2px 2px 3px #000), webkit moz ms o);
+    }
+    &:focus {
+        outline: none;
+    }
+    @media #{$maxMopile} {
+        width: 150px;
+        font-size: 15px;
+    }
+}
+
+.button-larg {
+    &:hover {
+        color: $colorHover;
+    }
+}
+
+.button-small {
+    width: 130px;
+    font-size: 13px;
+    margin: 0 30px;
+    padding: 7px;
+}
